@@ -20,6 +20,12 @@ good: $(exe)
 	-./sizeinv5 -20
 	./ret1 4
 	./ret1 -5
+	./loop1 10000 10000
+	./loop2 10000 10000
+	./loop1 10000 0
+	./loop2 10000 0
+	./loop1 10000 1
+	./loop2 10000 1
 
 bad: $(exe)
 	-./call1 5
@@ -36,6 +42,8 @@ bad: $(exe)
 	-./sizeinv5 0
 	-./ret1 5
 	-./ret1 -6
+	-./loop1 10000 10001
+	-./loop2 10000 10001
 	
 clean:
 	rm -rf $(exe) a.out trace.txt
