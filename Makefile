@@ -1,4 +1,5 @@
 exe := $(patsubst %.c,%,$(wildcard *.c))
+export LD_LIBRARY_PATH=../jemalloc/lib
 
 default : $(exe)
 
