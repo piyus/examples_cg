@@ -3,10 +3,11 @@
 
 void __attribute__((noinline)) foo(int n, int *arr, int n_iter)
 {
-  int i;
+  int i, v;
   for (i = 0; i < n_iter; i++) {
-    if (rand() > 1) { // very likely
-      arr[i] = rand();
+    v = rand();
+    if (v > 1) { // very likely
+      arr[i] = v;
     }
   }
 }

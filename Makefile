@@ -44,6 +44,6 @@ bad: $(exe)
 	-./ret1 -6
 	-./loop1 10000 10001
 	-./loop2 10000 10001
-	
+
 clean:
 	rm -rf $(exe) a.out trace.txt
