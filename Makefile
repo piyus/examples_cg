@@ -20,15 +20,15 @@ good: $(exe)
 	./store2 -6
 	-./sizeinv1
 	-./sizeinv2
-	-./sizeinv3 -1
-	-./sizeinv3 -20
-	-./sizeinv4 -1
-	-./sizeinv4 -20
-	-./sizeinv5 -1
-	-./sizeinv5 -20
+	-./sizeinv3 -2
+	-./sizeinv3 -25
+	-./sizeinv4 -2
+	-./sizeinv4 -25
+	-./sizeinv5 -2
+	-./sizeinv5 -25
 	-./sizeinv7
-	-./sizeinv8 -1
-	-./sizeinv8 -20
+	-./sizeinv8 -2
+	-./sizeinv8 -25
 	./ret1 4
 	./ret1 -5
 	./loop1 10000 10000
@@ -48,13 +48,15 @@ bad: $(exe)
 	-./store1 -7
 	-./store2 -7
 	-./sizeinv3 -0
-	-./sizeinv3 -21
+	-./sizeinv3 -26
 	-./sizeinv4 0
-	-./sizeinv4 -21
+	-./sizeinv4 -26
 	-./sizeinv5 0
-	-./sizeinv5 -21
+	-./sizeinv5 -26
 	-./sizeinv8 0
-	-./sizeinv8 -21
+	-./sizeinv8 -26
+	-./sizeinv9
+	-./sizeinv10
 	-./ret1 5
 	-./ret1 -6
 	-./loop1 10000 10001
