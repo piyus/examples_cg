@@ -9,6 +9,8 @@ int main(int argc, const char *argv[])
     return 0;
   }
   int i = atoi(argv[1]);
-  struct smallTy v;
-  return foo_may_unsafe((struct largeTy*)&v, i);
+  struct smallTy *v = (struct smallTy*)malloc(sizeof(struct smallTy));
+  struct largeTy *t[1];
+  t[0] = (struct largeTy*)v;
+  return foo_may_unsafe_ind(t, i);
 }
